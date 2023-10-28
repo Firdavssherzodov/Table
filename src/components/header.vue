@@ -10,7 +10,7 @@
        
         src="../../image/photo_2023-10-29_00-30-09 (1).png"
         class="me-2 "
-        height="40"
+        height="50"
         alt="MDB Logo"
         loading="lazy"
       />
