@@ -9,11 +9,7 @@ const router = createRouter({
       name: Home1,
       component: Home1,
     },
-    {
-      path: "/home2",
-      name: home2,
-      component: home2,
-    },
+   
   ],
 });
 

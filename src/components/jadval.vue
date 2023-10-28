@@ -20,37 +20,37 @@
       <th scope="row">2</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="70"/></td>
     </tr>
     <tr class="table-success">
       <th scope="row">3</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="60"/></td>
     </tr>
     <tr class="table-danger">
       <th scope="row">4</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="50"/></td>
     </tr>
     <tr class="table-warning">
       <th scope="row">5</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="40"/></td>
     </tr>
     <tr class="table-info">
       <th scope="row">6</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="30"/></td>
     </tr>
     <tr class="table-light">
       <th scope="row">7</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
+      <td> <n-progress :percentage="20"/></td>
     </tr>
   
   </tbody>
@@ -59,6 +59,23 @@
 </template>
 
 <script setup>
+import {ref} from 'vue'
+import axios from 'axios'
+
+let data = ref([])
+
+
+
+let getData = async () => {
+  let result = await axios.get('')
+data.value ;
+
+}
+
+
+setInterval(()=>{
+getData()
+},10000)
 
 </script>
 

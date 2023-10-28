@@ -2,7 +2,7 @@
     <div class="card">
 <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
- <router-link to="/home2">
+
     <div class="container-fluid">
     <a class="navbar-brand" href="#">
   
@@ -19,8 +19,8 @@
 ;">Turon IT academy</small>
     </a>
   </div>
-</router-link>
-<form class="d-flex input-group w-auto">
+
+<!-- <form class="d-flex input-group w-auto">
         <input
           type="search"
           class="form-control"
@@ -34,7 +34,7 @@
         >
           Search
         </button>
-      </form>
+      </form> -->
 </nav>
 
     </div>
