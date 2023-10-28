@@ -14,10 +14,6 @@
       <th scope="row">1</th>
       <td>Cell</td>
       <td>Cell</td>
-      <td> <n-progress :percentage="90"/></td>
-    </tr>
-    <tr class="table-secondary">
-      <th scope="row">2</th>
       <td>Cell</td>
       <td>Cell</td>
       <td> <n-progress :percentage="70"/></td>
@@ -62,20 +58,11 @@
 import {ref} from 'vue'
 import axios from 'axios'
 
-let data = ref([])
 
 
 
-let getData = async () => {
-  let result = await axios.get('')
-data.value ;
-
-}
 
 
-setInterval(()=>{
-getData()
-},10000)
 
 </script>
 
@@ -86,5 +73,4 @@ color: #303F9F;
 font-weight: 700;
 font-family:  sans-serif;
 }
-
 </style>
