@@ -18,7 +18,7 @@
           <td scope="col" class="fw-bold text-dark">{{  index += 1 }}</td>
           <td scope="col" class="fst-normal fw-bold name">{{ srt.last_name }} {{ srt.firt_name  }}</td>
           <td class="fw-bold">" {{ srt.group }} "</td>
-          <td scope="col">{{ srt.wpm }}%</td>
+          <td scope="col">{{ srt.wpm }}</td>
           <td scope="col">{{ srt.consistency }} %</td>
 
           <td><n-progress :percentage="srt.accuracy " processing/></td>
