@@ -21,7 +21,7 @@
           <td scope="col">{{ srt.wpm }}%</td>
           <td scope="col">{{ srt.consistency }} %</td>
 
-          <td><n-progress :percentage="srt.accuracy " /></td>
+          <td><n-progress :percentage="srt.accuracy " processing/></td>
         </tr>
       </tbody>
     </table>
