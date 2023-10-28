@@ -15,7 +15,7 @@
         loading="lazy"
       />
    
-      <small class="smal" style="color: #e2e0e0
+      <small class="smal" style="color: #ffffff
 
 ;">Turon IT academy</small>
     </a>
