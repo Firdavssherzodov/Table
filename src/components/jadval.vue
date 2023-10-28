@@ -5,7 +5,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col" class="fw-bold text-dark">N</th>
+          <th scope="col" class="fw-bold text-dark">№</th>
           <th scope="col" class="fw-bold">Name</th>
           <th scope="col" class="fw-bold">Group</th>
           <th scope="col" class="fw-bold"> wpm</th>
