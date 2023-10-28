@@ -1,20 +1,21 @@
 <template>
-    <div class="card">
+    <div class="card ">
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-secondary">
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
     <a class="navbar-brand" href="#">
-  
+  <!-- src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" -->
         <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        class="me-2"
-        height="20"
+       
+        src="../../image/photo_2023-10-29_00-30-09 (1).png"
+        class="me-2 "
+        height="40"
         alt="MDB Logo"
         loading="lazy"
       />
    
-      <small class="smal" style="color: #303F9F
+      <small class="smal" style="color: #e2e0e0
 
 ;">Turon IT academy</small>
     </a>
