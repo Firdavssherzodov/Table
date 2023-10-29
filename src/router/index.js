@@ -9,7 +9,6 @@ const router = createRouter({
       name: Home1,
       component: Home1,
     },
-   
   ],
 });
 

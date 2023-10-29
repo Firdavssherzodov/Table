@@ -55,7 +55,6 @@ setInterval(()=>{
   getData();
 },10000)
 // 'https://djumanov.pythonanywhere.com/results/'
-
 </script>
 
 <style scoped>
@@ -67,5 +66,4 @@ th:nth-child(1) {
 .name{
   color: #303f9f;
 }
- 
 </style>
