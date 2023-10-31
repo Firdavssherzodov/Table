@@ -54,8 +54,6 @@ function getData() {
       if (first.consistency < second.consistency) return 1;
       return 0;
     });
-
-    console.log((data.value = resp.data));
   });
 }
 

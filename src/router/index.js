@@ -18,21 +18,6 @@ const router = createRouter({
       path:'/admin',
       name:Admin,
       component:Admin
-    },
-    {
-      path: "/wpm",
-      name: wpm1,
-      component: wpm1
-    },
-    {
-      path:'/accuracy',
-      name:accuracy1,
-      component:accuracy1
-    },
-    {
-      path:'/consistency',
-      name:consist,
-      component:consist
     }
   ],
 });
