@@ -40,6 +40,12 @@ function getData() {
   axios.get("https://djumanov.pythonanywhere.com/results/").then((resp) => {
     if (resp.status === 200) data.value = resp.data;
 
+    data.value.sort((first, second) => {
+      if (first.consistency > second.consistency) return -1;
+      if (first.consistency < second.consistency) return 1;
+      return 0;
+    });
+
     console.log((data.value = resp.data));
   });
 }
@@ -48,7 +54,8 @@ getData();
 
 setInterval(() => {
   getData();
-}, 10000);
+}, 60000);
+
 // 'https://djumanov.pythonanywhere.com/results/'
 </script>
 
