@@ -2,6 +2,7 @@
   <div class="card">
     <!-- Image and text -->
     <nav class="navbar navbar-light bg-secondary">
+      <router-link to="/">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <!-- src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" -->
@@ -16,6 +17,7 @@
           <small class="smal" style="color: #ffffff">Turon IT academy</small>
         </a>
       </div>
+    </router-link>
     </nav>
   </div>
 </template>

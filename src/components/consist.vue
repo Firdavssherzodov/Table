@@ -1,4 +1,5 @@
 <template>
+  <header1 />
   <n-scrollbar x-scrollable>
     <div class="white-space: nowrap;">
       <table class="table">
@@ -7,18 +8,17 @@
             <th scope="col" class="fw-bold text-dark">№</th>
             <th scope="col" class="fw-bold">Name</th>
             <th scope="col" class="fw-bold">Group</th>
+            <th scope="col" class="fw-bold">
+              <router-link to="/wpm" class="text-dark">wpm</router-link>
+            </th>
 
-              <th scope="col" class="fw-bold text-dark">
-                <router-link to="/wpm" class="text-dark">wpm</router-link>
-              </th>
+            <th scope="col" class="fw-bold">
+              <router-link to="/consistency">Consistency</router-link>
+            </th>
 
-              <th scope="col" class="fw-bold">
-                <router-link to="/consistency" class="text-dark">Consistency</router-link>
-              </th>
-
-              <th scope="col" class="fw-bold">
-                <router-link to="/accuracy" class="text-dark">Accuracy</router-link>
-              </th>
+            <th scope="col" class="fw-bold">
+              <router-link to="/accuracy" class="text-dark">Accuracy</router-link>
+            </th>
           </tr>
         </thead>
         <tbody v-for="(srt, index) in data" :key="index">
@@ -28,9 +28,8 @@
               {{ srt.last_name }} {{ srt.firt_name }}
             </td>
             <td scope="col" class="fw-bold">{{ srt.group }}</td>
-            <td scope="col">{{ srt.wpm }}</td>
+            <td scope="col">  {{ srt.wpm }}</td>
             <td scope="col">{{ srt.consistency }} %</td>
-
             <td><n-progress :percentage="srt.accuracy" processing /></td>
           </tr>
         </tbody>
@@ -40,6 +39,7 @@
 </template>
 
 <script setup>
+import header1 from "../components/header.vue";
 import axios from "axios";
 import { ref } from "vue";
 

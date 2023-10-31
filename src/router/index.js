@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home1 from "../components/Home.vue";
 import Admin from "../components/Admin.vue";
-import wpm from '../group/wpm.vue';
-import accuracy from '../group/accuracy.vue';
-import consistency from '../group/consistency.vue';
+import wpm1 from '../components/wpm.vue';
+import accuracy1 from '../components/accuracy.vue';
+import consist  from '../components/consist.vue';
 
 
 const router = createRouter({
@@ -21,18 +21,18 @@ const router = createRouter({
     },
     {
       path: "/wpm",
-      name: wpm,
-      component: wpm
+      name: wpm1,
+      component: wpm1
     },
     {
       path:'/accuracy',
-      name:accuracy,
-      component:accuracy
+      name:accuracy1,
+      component:accuracy1
     },
     {
       path:'/consistency',
-      name:accuracy,
-      component:accuracy
+      name:consist,
+      component:consist
     }
   ],
 });
