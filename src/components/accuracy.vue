@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <header1/>
     <n-scrollbar x-scrollable>
       <div class="white-space: nowrap;">
@@ -78,4 +78,4 @@
     color: #303f9f;
   }
   </style>
-  
+   -->

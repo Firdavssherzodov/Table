@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <header1 />
   <n-scrollbar x-scrollable>
     <div class="white-space: nowrap;">
@@ -77,4 +77,4 @@ th:nth-child(1) {
 .name {
   color: #303f9f;
 }
-</style>
+</style> -->

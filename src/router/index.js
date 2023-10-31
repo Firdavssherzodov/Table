@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home1 from "../components/Home.vue";
 import Admin from "../components/Admin.vue";
-import wpm1 from '../components/wpm.vue';
-import accuracy1 from '../components/accuracy.vue';
-import consist  from '../components/consist.vue';
+
 
 
 const router = createRouter({
@@ -19,6 +17,7 @@ const router = createRouter({
       name:Admin,
       component:Admin
     }
+  
   ],
 });
 

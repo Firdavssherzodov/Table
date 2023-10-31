@@ -8,17 +8,22 @@
             <th scope="col" class="fw-bold">Name</th>
             <th scope="col" class="fw-bold">Group</th>
 
-              <th scope="col" class="fw-bold text-dark">
-                <router-link to="/wpm" class="text-dark">wpm</router-link>
-              </th>
+            <th
+              scope="col"
+              class="fw-bold  Wpm mmp"
+               
+              @click="Wpm"
+            >
+              Wpm
+            </th>
 
-              <th scope="col" class="fw-bold">
-                <router-link to="/consistency" class="text-dark">Consistency</router-link>
-              </th>
+            <th scope="col" class="fw-bold Consistency" @click="Consistency">
+              Consistency
+            </th>
 
-              <th scope="col" class="fw-bold">
-                <router-link to="/accuracy" class="text-dark">Accuracy</router-link>
-              </th>
+            <th scope="col" class="fw-bold Accuracy" @click="Accuracy">
+              Accuracy
+            </th>
           </tr>
         </thead>
         <tbody v-for="(srt, index) in data" :key="index">
@@ -63,6 +68,45 @@ setInterval(() => {
   getData();
 }, 60000);
 
+function Consistency() {
+  document.querySelector(".Consistency").style.color = "#3B71CA";
+  document.querySelector(".Wpm").style.color = "black";
+  document.querySelector(".Accuracy").style.color = "black";
+  axios.get("https://djumanov.pythonanywhere.com/results/").then((resp) => {
+    if (resp.status === 200) data.value = resp.data;
+
+    data.value.sort((first, second) => {
+      if (first.consistency > second.consistency) return -1;
+      if (first.consistency < second.consistency) return 1;
+      return 0;
+    });
+  });
+}
+
+function Accuracy() {
+  document.querySelector(".Consistency").style.color = "black";
+  document.querySelector(".Accuracy").style.color = "#3B71CA";
+  document.querySelector(".Wpm").classList.add('black');
+  data.value.sort((first, second) => {
+    if (first.accuracy > second.accuracy) return -1;
+    if (first.accuracy < second.accuracy) return 1;
+    return 0;
+  });
+}
+
+function Wpm(){
+  document.querySelector(".Consistency").style.color = "black";
+  document.querySelector(".Accuracy").style.color = "black";
+  document.querySelector(".Wpm").style.color = "#3B71CA";
+  // document.querySelector(".Wpm").classList.remove('text-dark');
+  data.value.sort((first, second) => {
+    if (first.wpm > second.wpm) return -1;
+    if (first.wpm < second.wpm) return 1;
+    return 0;
+  });
+ 
+}
+
 // 'https://djumanov.pythonanywhere.com/results/'
 </script>
 
@@ -75,4 +119,12 @@ th:nth-child(1) {
 .name {
   color: #303f9f;
 }
+.Consistency,.Accuracy,.Wpm:hover{
+cursor: pointer;
+}
+.mmp{
+  color: #3B71CA;
+}
+
+ 
 </style>
