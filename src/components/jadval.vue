@@ -5,8 +5,8 @@
         <thead>
           <tr>
             <th scope="col" class="fw-bold text-dark">№</th>
-            <th scope="col" class="fw-bold">Name</th>
-            <th scope="col" class="fw-bold">Group</th>
+            <th scope="col" class="fw-bold text-dark">Name</th>
+            <th scope="col" class="fw-bold text-dark">Group</th>
 
             <th scope="col" class="fw-bold Wpm mmp" @click="Wpm">Wpm</th>
 
