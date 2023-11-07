@@ -113,7 +113,4 @@ th:nth-child(1) {
 .Wpm:hover {
   cursor: pointer;
 }
-.mmp {
-  color: #3b71ca;
-}
 </style>
