@@ -8,7 +8,7 @@
             <th scope="col" class="fw-bold text-dark">Name</th>
             <th scope="col" class="fw-bold text-dark">Group</th>
 
-            <th scope="col" class="fw-bold Wpm mmp" @click="Wpm">Wpm</th>
+            <th scope="col" class="fw-bold Wpm" @click="Wpm">Wpm</th>
 
             <th scope="col" class="fw-bold Consistency" @click="Consistency">
               Consistency
@@ -43,6 +43,7 @@ import { ref } from "vue";
 
 let data = ref([]);
 
+
 function getData() {
   axios.get("https://djumanov.pythonanywhere.com/results/").then((resp) => {
     if (resp.status === 200) data.value = resp.data;
@@ -76,7 +77,7 @@ function Consistency() {
 function Accuracy() {
   document.querySelector(".Consistency").style.color = "black";
   document.querySelector(".Accuracy").style.color = "#3B71CA";
-  document.querySelector(".Wpm").classList.add("black");
+  document.querySelector(".Wpm").classList.add("text-black");
   data.value.sort((first, second) => {
     if (first.accuracy > second.accuracy) return -1;
     if (first.accuracy < second.accuracy) return 1;
@@ -85,10 +86,11 @@ function Accuracy() {
 }
 
 function Wpm() {
+  document.querySelector(".Wpm").classList.remove('text-black');
   document.querySelector(".Consistency").style.color = "black";
   document.querySelector(".Accuracy").style.color = "black";
   document.querySelector(".Wpm").style.color = "#3B71CA";
-  // document.querySelector(".Wpm").classList.remove('text-dark');
+
   data.value.sort((first, second) => {
     if (first.wpm > second.wpm) return -1;
     if (first.wpm < second.wpm) return 1;
@@ -112,5 +114,8 @@ th:nth-child(1) {
 .Accuracy,
 .Wpm:hover {
   cursor: pointer;
+}
+.Wpm{
+color: #3B71CA;
 }
 </style>
