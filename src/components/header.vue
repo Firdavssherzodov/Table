@@ -18,11 +18,27 @@
         </a>
       </div>
     </router-link>
+
+    <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control rounded-5"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+        :v-model="input1"
+      />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search text-white fs-5"></i>
+      </span>
+    </form> 
     </nav>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+</script>
 
 <style scoped>
 .smal {
